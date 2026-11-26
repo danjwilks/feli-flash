@@ -1,0 +1,1450 @@
+# Evidence-Based Anki Deck: Canadian Tort Law (Post-Review v2)
+# Converted from 16 handwritten study cards (IMG_4050.HEIC - IMG_4065.HEIC)
+# Architecture:
+#   - Flat broad deck with rich hierarchical '::' tags (natural cross-topic interleaving)
+#   - Atomic Q&A + Optional Reverse (non-leaking Context) + tight rewritten Cloze (<= 3 words/blank)
+#   - Full 5-lens coverage: definition, element, boundary, mechanism, contrast, defence, application
+#   - Strict signaling hygiene (<= 2 bold spans per field), zero binary prompts, zero "List all N" dumps
+
+deck:
+  name: "Canadian Tort Law"
+  description: >-
+    Evidence-based Canadian Tort Law deck converted from handwritten study cards.
+    Recommended Anki 25.07+ settings: FSRS-6 ON, Desired Retention 0.85-0.90,
+    learning/relearning steps 10m-15m, all 3 sibling-burying options ON,
+    10 new cards/day (set New card gather/sort order to Random for cross-topic interleaving),
+    uncapped reviews, leech suspend at 6-8 lapses.
+  tags:
+    - canadian_law
+
+cards:
+  # =========================================================================
+  # 1. BATTERY (IMG_4051.HEIC)
+  # =========================================================================
+  - id: battery-definition
+    type: qa
+    context: "Torts · Intentional Torts (Person)"
+    front: "What is the legal definition of **battery**?"
+    back: "The actual infliction of **unlawful force** on another person."
+    why_extra: "Unlike assault (apprehension of imminent contact) or false imprisonment (total restraint), battery requires actual physical contact with P's body."
+    source_date: "IMG_4051.HEIC · 2026-11-25"
+    add_reverse: true
+    tags:
+      - topic::torts::battery
+      - lens::definition
+      - jurisdiction::canada
+      - source::IMG_4051
+
+  - id: battery-elements-cloze
+    type: cloze
+    context: "Torts · Battery"
+    text: "Battery requires D to intentionally inflict {{c1::harmful or offensive}} contact with P's body beyond {{c2::ordinary social intercourse}} (assessed objectively)."
+    why_extra: "The card notes 'beyond ordinary / generally acceptable social intercourse'—incidental brushing in a crowd is not battery."
+    source_date: "IMG_4051.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::battery
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4051
+
+  - id: battery-per-se-harm
+    type: qa
+    context: "Torts · Battery · Harm"
+    front: "What physical injury or harm must P prove to succeed in **battery**?"
+    back: "**None**—battery is a **per se** tort actionable without proof of harm."
+    why_extra: "Bodily autonomy is protected per se, so offensive non-injurious contact (e.g., spitting or unwanted touching) is still actionable."
+    source_date: "IMG_4051.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::battery
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4051
+
+  - id: battery-burden-shift
+    type: qa
+    context: "Torts · Battery · Burden of Proof"
+    front: "In battery, what happens to the **burden of proof** once P establishes physical contact?"
+    back: "The burden shifts to **D** to prove or raise a defence."
+    why_extra: "Once P proves direct contact, D bears the onus of establishing a lawful justification such as consent or self-defence."
+    source_date: "IMG_4051.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::battery
+      - lens::mechanism
+      - jurisdiction::canada
+      - source::IMG_4051
+
+  - id: contrast-battery-vs-assault-intent
+    type: qa
+    context: "Torts · Battery vs. Assault"
+    front: "How does the required **intent** in battery differ from the required intent in assault?"
+    back: "Battery requires intent to inflict **contact**; assault requires intent to create **apprehension** of imminent battery (not intent to commit the battery)."
+    why_extra: "Feinting a punch right in front of P to scare them—without intending to land the blow—satisfies assault's intent element even though D never intended battery."
+    source_date: "IMG_4051.HEIC & IMG_4053.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::battery
+      - topic::torts::assault
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4051
+      - source::IMG_4053
+
+  # =========================================================================
+  # 2. ASSAULT (IMG_4053.HEIC)
+  # =========================================================================
+  - id: assault-definition
+    type: qa
+    context: "Torts · Intentional Torts (Person)"
+    front: "What is the legal definition of **assault**?"
+    back: "An act or intentional creation of apprehension of **imminent** harmful or offensive (unlawful) physical contact."
+    why_extra: "Assault protects against fear of knowledge and expectation of immediate unlawful contact—no actual touching is required."
+    source_date: "IMG_4053.HEIC · 2026-11-25"
+    add_reverse: true
+    tags:
+      - topic::torts::assault
+      - lens::definition
+      - jurisdiction::canada
+      - source::IMG_4053
+
+  - id: assault-apprehension-standard
+    type: qa
+    context: "Torts · Assault · Apprehension"
+    front: "By what standard do courts assess P's **apprehension or fear** of imminent unlawful contact in assault?"
+    back: "It is determined **objectively** (reasonable apprehension or fear of imminent physical contact)."
+    why_extra: "P must face a reasonable expectation of immediate battery, judged objectively rather than by unusually timid subjective fears."
+    source_date: "IMG_4053.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::assault
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4053
+
+  - id: assault-imminence-means
+    type: qa
+    context: "Torts · Assault · Threats"
+    front: "In assault, why does a threat made **without actual means** to carry it out fail liability?"
+    back: "It fails **imminence**—a threat without actual means does not establish imminent physical contact."
+    why_extra: "Per these notes, threat without actual means ≠ imminence; words or gestures signaling future or impossible violence cannot support assault."
+    source_date: "IMG_4053.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::assault
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4053
+
+  - id: app-assault-feinted-punch
+    type: qa
+    context: "Torts · Assault · Application"
+    front: "D swings a fist right at P's face and stops an inch short purely to scare P—why does this still satisfy assault's **intent** element?"
+    back: "Assault requires only intent to put P in **fear or expectation** of battery, not intent to actually commit the battery."
+    why_extra: "Unlike a threat made without actual means (which fails imminence), a close-range feinted punch carries immediate physical ability to strike."
+    source_date: "IMG_4053.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::assault
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4053
+
+  - id: contrast-assault-vs-iims-cumulative
+    type: qa
+    context: "Torts · Assault vs. IIMS"
+    front: "How does **assault** differ from **IIMS** in treating cumulative conduct over time?"
+    back: "Assault covers only **discrete** imminent instances, whereas IIMS can be established by either a single act or **cumulative** conduct."
+    why_extra: "Long-running patterns of emotional abuse that lack discrete threats of immediate physical contact fit IIMS or harassment rather than assault."
+    source_date: "IMG_4053.HEIC & IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::assault
+      - topic::torts::iims
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4053
+      - source::IMG_4055
+
+  # =========================================================================
+  # 3. FALSE IMPRISONMENT (IMG_4052.HEIC)
+  # =========================================================================
+  - id: false-imprisonment-definition
+    type: qa
+    context: "Torts · Intentional Torts (Person)"
+    front: "What is the legal definition of **false imprisonment**?"
+    back: "A wrongful **total restraint** on the plaintiff's liberty directly brought about by the defendant."
+    why_extra: "Partial obstruction (blocking one path when another safe exit exists) is not total restraint and does not constitute false imprisonment."
+    source_date: "IMG_4052.HEIC · 2026-11-25"
+    add_reverse: true
+    tags:
+      - topic::torts::false_imprisonment
+      - lens::definition
+      - jurisdiction::canada
+      - source::IMG_4052
+
+  - id: false-imprisonment-escape-boundary
+    type: qa
+    context: "Torts · False Imprisonment · Total Restraint"
+    front: "Under false imprisonment, when does an **available exit** still fail to defeat 'total restraint'?"
+    back: "When it is not a **reasonable means of escape**."
+    why_extra: "Element 1 requires P to be totally restrained—forcing P to jump from a high window or risk serious injury is not a reasonable means of escape."
+    source_date: "IMG_4052.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::false_imprisonment
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4052
+
+  - id: false-imprisonment-deprivation-standard
+    type: qa
+    context: "Torts · False Imprisonment · Deprivation"
+    front: "What legal test defines **'deprived of liberty'** under element 2 of false imprisonment?"
+    back: "Whether a **reasonable person in P's position** would feel they have **no choice** (whether physical or psychological)."
+    why_extra: "The restraint must also be against P's will—voluntary submission is not deprivation."
+    source_date: "IMG_4052.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::false_imprisonment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4052
+
+  - id: false-imprisonment-causation
+    type: qa
+    context: "Torts · False Imprisonment · Element 3"
+    front: "What must P prove for element 3 of false imprisonment (**deprivation caused directly by D**)?"
+    back: "Deprivation **against P's will** meeting **but-for** causation—P would not have yielded without D's act (contribution/influence is insufficient)."
+    why_extra: "Merely contributing to or influencing a third party's restraint fails Element 3 unless D's action was the direct but-for cause."
+    source_date: "IMG_4052.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::false_imprisonment
+      - lens::mechanism
+      - jurisdiction::canada
+      - source::IMG_4052
+
+  - id: app-false-imprisonment-security-guard
+    type: qa
+    context: "Torts · False Imprisonment · Application"
+    front: "Store security falsely orders P into an **unlocked** room, and P stays out of perceived legal obligation—why is this still false imprisonment?"
+    back: "Deprivation can be **psychological** when a reasonable person in P's position feels they have **no choice** against their will."
+    why_extra: "Physical locks or contact are unnecessary once unlawful authority coerces P's submission."
+    source_date: "IMG_4052.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::false_imprisonment
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4052
+
+  - id: contrast-false-imprisonment-vs-battery-assault
+    type: qa
+    context: "Torts · False Imprisonment vs. Battery & Assault"
+    front: "What protected interest lets **false imprisonment** succeed when D neither touches P (battery) nor threatens imminent force (assault)?"
+    back: "It protects **freedom of movement** against total restraint (physical or psychological), without requiring contact or imminent violence."
+    why_extra: "Always spot all three person-torts separately on exams: contact = battery, imminent apprehension = assault, total restraint = false imprisonment."
+    source_date: "IMG_4051.HEIC, IMG_4052.HEIC & IMG_4053.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::false_imprisonment
+      - topic::torts::battery
+      - topic::torts::assault
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4051
+      - source::IMG_4052
+      - source::IMG_4053
+
+  # =========================================================================
+  # 4. IIMS — INTENTIONAL INFLICTION OF MENTAL SUFFERING (IMG_4055.HEIC)
+  # =========================================================================
+  - id: iims-elements-cloze
+    type: cloze
+    context: "Torts · IIMS"
+    text: "IIMS requires (1) {{c1::flagrant and outrageous}} conduct (objectively), (2) {{c2::calculated}} to cause harm (subjectively—from D's perspective), resulting in (3) {{c3::visible and provable}} injury (objectively)."
+    why_extra: "Notice the alternating perspectives: Element 1 is objective, Element 2 is subjective (from D's perspective), and Element 3 is objective."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  - id: iims-element1-malice
+    type: qa
+    context: "Torts · IIMS · Element 1 (Conduct)"
+    front: "Under IIMS element 1 (**flagrant and outrageous conduct**), what role does malicious intent play?"
+    back: "Malicious intent is **not required**—the conduct is assessed objectively."
+    why_extra: "Even without malice, objectively outrageous conduct (whether one act or cumulative) can satisfy Element 1."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  - id: iims-element1-factors
+    type: qa
+    context: "Torts · IIMS · Element 1 (Conduct)"
+    front: "What objective considerations help courts find conduct **flagrant and outrageous** under IIMS element 1?"
+    back: "Whether harm was **foreseeable** or D's conduct was **reckless**, across a single act or cumulative conduct."
+    why_extra: "Do not confuse Element 1 with Element 2: foreseeability/recklessness can inform Element 1, yet fail Element 2."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  - id: iims-element2-threshold
+    type: qa
+    context: "Torts · IIMS · Element 2 (Mental State)"
+    front: "What subjective mental state satisfies IIMS element 2 (**calculated to cause harm**)?"
+    back: "D intended to produce such harm, or knew harm was **substantially certain** to follow (intent is **imputed**)."
+    why_extra: "Assessed subjectively from D's perspective—not merely what a reasonable person would have foreseen."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - lens::mechanism
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  - id: iims-element2-exclusions
+    type: qa
+    context: "Torts · IIMS · Element 2 (Mental State)"
+    front: "Why do **mere foreseeability** and **reckless disregard** fail IIMS element 2 ('calculated to cause harm')?"
+    back: "Element 2 demands subjective intent or **substantial certainty**—lower fault levels do not satisfy it."
+    why_extra: "When a fact pattern shows reckless emotional harm rather than substantial certainty, pivot to Internet Harassment or Common-Law Harassment."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  - id: iims-visible-provable-injury
+    type: qa
+    context: "Torts · IIMS · Element 3 (Injury)"
+    front: "Why does the absence of **medical evidence** not necessarily defeat IIMS element 3 ('visible and provable injury')?"
+    back: "Courts assess injury objectively by focusing on **symptoms** rather than specific medical diagnoses."
+    why_extra: "While medical documentation helps prove the claim, courts examine concrete, observable symptoms rather than requiring a named psychiatric label."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  - id: app-iims-reckless-boss
+    type: qa
+    context: "Torts · IIMS · Application"
+    front: "D publicly berates P with **reckless disregard** for P's mental health, causing diagnosed depression—why does IIMS still fail?"
+    back: "Element 2 (**calculated to cause harm**) requires subjective intent or **substantial certainty**; reckless disregard alone fails."
+    why_extra: "Recklessness may support Element 1 (flagrant/outrageous), but fails Element 2—check Common-Law Harassment or Internet Harassment instead."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  - id: contrast-iims-vs-internet-harassment-intent
+    type: qa
+    context: "Torts · IIMS vs. Internet Harassment · Fault"
+    front: "How does the required **mental state** in internet harassment differ from IIMS?"
+    back: "Internet harassment captures **recklessness**, whereas IIMS requires subjective **intent or substantial certainty**."
+    why_extra: "Internet harassment sets a lower standard of conduct/fault than IIMS while being more elaborate in describing outrageous degree."
+    source_date: "IMG_4050.HEIC & IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - topic::torts::internet_harassment
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4050
+      - source::IMG_4055
+
+  - id: contrast-iims-vs-internet-harassment-harm
+    type: qa
+    context: "Torts · IIMS vs. Internet Harassment · Harm"
+    front: "How does the required **harm threshold** in internet harassment differ from IIMS?"
+    back: "Internet harassment requires ***Mustapha*-level** harm, which is lower than IIMS's **visible and provable injury**."
+    why_extra: "Mustapha-level harm is still more than mere upset, yet stops short of IIMS's visible/provable injury bar."
+    source_date: "IMG_4050.HEIC & IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - topic::torts::internet_harassment
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4050
+      - source::IMG_4055
+
+  # =========================================================================
+  # 5. INTERNET HARASSMENT (IMG_4050.HEIC)
+  # =========================================================================
+  - id: internet-harassment-conduct-cloze
+    type: cloze
+    context: "Torts · Internet Harassment"
+    text: "Internet harassment requires D to engage {{c1::maliciously or recklessly}} in outrageous communication conduct beyond all possible bounds of {{c2::decency and tolerance}}."
+    why_extra: "Lower conduct/fault threshold than IIMS (accepts recklessness), though more elaborate in describing outrageous degree."
+    source_date: "IMG_4050.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::internet_harassment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4050
+
+  - id: internet-harassment-outrageous-dimensions
+    type: qa
+    context: "Torts · Internet Harassment · Element 1"
+    front: "Across what three dimensions is communication conduct judged **outrageous** in internet harassment?"
+    back: "Its **character**, **duration**, and extreme degree."
+    why_extra: "This phrasing makes internet harassment 'more elaborate in degree' than IIMS's general 'flagrant and outrageous' label."
+    source_date: "IMG_4050.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::internet_harassment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4050
+
+  - id: internet-harassment-intent
+    type: qa
+    context: "Torts · Internet Harassment · Element 2 (Targets)"
+    front: "What two alternative **intended or reckless effects** satisfy element 2 of internet harassment?"
+    back: "Causing **fear, anxiety, or emotional upset**, or **impugning P's dignity**."
+    why_extra: "Element 2 is disjunctive—either emotional-upset effects or impugning P's dignity satisfies the target prong."
+    source_date: "IMG_4050.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::internet_harassment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4050
+
+  - id: internet-harassment-element2-fault
+    type: qa
+    context: "Torts · Internet Harassment · Element 2 (Fault)"
+    front: "What two **fault states** are captured under element 2 of internet harassment?"
+    back: "Both **intentional** and **reckless** acts."
+    why_extra: "The handwritten note explicitly emphasizes '(capture reckless AND intentional act)' under Element 2, setting a lower fault bar than IIMS."
+    source_date: "IMG_4050.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::internet_harassment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4050
+
+  - id: internet-harassment-harm
+    type: qa
+    context: "Torts · Internet Harassment · Harm"
+    front: "What threshold of **harm** must P suffer in internet harassment?"
+    back: "***Mustapha*-level** harm—more than mere upset, yet below IIMS's visible and provable injury."
+    why_extra: "Element 3 requires P to actually suffer such harm (not actionable per se)."
+    source_date: "IMG_4050.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::internet_harassment
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4050
+
+  # =========================================================================
+  # 6. COMMON-LAW HARASSMENT (IMG_4054.HEIC)
+  # =========================================================================
+  - id: harassment-conduct-frequency
+    type: qa
+    context: "Torts · Common-Law Harassment · Element 1"
+    front: "What pattern and scope of conduct satisfy element 1 of **common-law harassment**?"
+    back: "**Repeated** communications, threats, insults, stalking, or other harassing behaviour (or through other means)."
+    why_extra: "Because Element 1 includes 'other harassing behaviour' and 'through other means', it is not limited to four rigid categories—but repetition is required."
+    source_date: "IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4054
+
+  - id: harassment-knowledge-standard
+    type: qa
+    context: "Torts · Common-Law Harassment · Element 2"
+    front: "What **knowledge standard** governs whether D's conduct was unwelcome in common-law harassment?"
+    back: "D **knew** (subjective) or **ought to have known** (objective) the conduct was unwelcome."
+    why_extra: "Both subjective and objective tests can apply—D cannot escape liability by claiming ignorance when a reasonable person would know the acts were unwelcome."
+    source_date: "IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4054
+
+  - id: harassment-impact-cloze
+    type: cloze
+    context: "Torts · Common-Law Harassment · Element 3"
+    text: "Element 3 of harassment is met if conduct impugns P's {{c1::dignity}}, would cause a reasonable person to {{c2::fear for safety}} (or loved ones'), or could foreseeably cause {{c3::emotional distress}}."
+    why_extra: "Notice the objective tendency/foreseeability wording ('would cause' / 'could foreseeably cause')—distinct from Element 4, which requires actual caused harm."
+    source_date: "IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4054
+
+  - id: harassment-harm-threshold
+    type: qa
+    context: "Torts · Common-Law Harassment · Harm"
+    front: "What minimum **harm** must D's conduct cause to satisfy element 4 of common-law harassment?"
+    back: "D's conduct must cause at least ***Mustapha*-level** harm."
+    why_extra: "Like internet harassment, common-law harassment is not actionable per se—P must prove caused harm rising to at least the Mustapha threshold."
+    source_date: "IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4054
+
+  - id: torts-harm-severity-ladder
+    type: qa
+    context: "Torts · Common-Law Harassment · Harm Ladder"
+    front: "Rank these three tort **harm tiers** from highest to lowest: *psychological injury*, *severe/extreme*, *visible/provable harm*."
+    back: "**Visible/provable harm** > severe/extreme > psychological injury."
+    why_extra: "This ladder from IMG_4054 anchors the relative thresholds across mental-distress torts: IIMS sits at the top (visible/provable), while harassment requires at least Mustapha-level psychological injury."
+    source_date: "IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - topic::torts::iims
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4054
+
+  - id: contrast-harassment-vs-internet-conduct
+    type: qa
+    context: "Torts · Harassment vs. Internet Harassment · Conduct"
+    front: "How does the required **conduct** in common-law harassment differ from internet harassment?"
+    back: "Common-law harassment requires **repeated** unwelcome acts; internet harassment targets **outrageous** communication conduct (character, duration, extreme degree)."
+    why_extra: "Common-law harassment spans offline or online repeated stalking/threats/insults; internet harassment focuses on extreme communication conduct."
+    source_date: "IMG_4050.HEIC & IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - topic::torts::internet_harassment
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4050
+      - source::IMG_4054
+
+  - id: contrast-harassment-vs-internet-fault
+    type: qa
+    context: "Torts · Harassment vs. Internet Harassment · Fault"
+    front: "How does D's required **knowledge or fault** in common-law harassment differ from internet harassment?"
+    back: "Common-law harassment asks if D **knew or ought to have known** acts were unwelcome; internet harassment requires acting **maliciously or recklessly**."
+    why_extra: "Common-law harassment's 'ought to have known' prong brings in an objective knowledge standard."
+    source_date: "IMG_4050.HEIC & IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - topic::torts::internet_harassment
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4050
+      - source::IMG_4054
+
+  - id: contrast-harassment-vs-iims-conduct
+    type: qa
+    context: "Torts · Common-Law Harassment vs. IIMS · Conduct"
+    front: "How do **common-law harassment** and **IIMS** differ on whether a single act suffices?"
+    back: "Harassment requires **repeated** acts, whereas IIMS can be established by a **single act** or cumulative conduct."
+    why_extra: "A single extreme incident cannot support common-law harassment (which requires repetition), so analyze IIMS instead."
+    source_date: "IMG_4054.HEIC & IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - topic::torts::iims
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4054
+      - source::IMG_4055
+
+  - id: contrast-harassment-vs-iims-fault
+    type: qa
+    context: "Torts · Common-Law Harassment vs. IIMS · Fault"
+    front: "How does D's required **mental state** in common-law harassment differ from IIMS?"
+    back: "Harassment asks if D **knew or ought to have known** acts were unwelcome; IIMS requires subjective **intent or substantial certainty** of harm."
+    why_extra: "When D repeatedly stalks P while denying intent to cause injury, common-law harassment succeeds via 'ought to have known' even if IIMS Element 2 fails."
+    source_date: "IMG_4054.HEIC & IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - topic::torts::iims
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4054
+      - source::IMG_4055
+
+  # =========================================================================
+  # 7. INTIMATE PARTNER VIOLENCE THROUGH COERCIVE CONTROL (IMG_4056.HEIC)
+  # =========================================================================
+  - id: ipv-coercive-control-definition
+    type: qa
+    context: "Torts · IPV Coercive Control"
+    front: "How is **coercive control** defined in the tort of intimate partner violence?"
+    back: "Conduct that has the effect of **subordinating** an intimate partner to the other partner's control."
+    why_extra: "Captures patterns of domination and subordination within intimate relationships that isolated discrete torts miss."
+    source_date: "IMG_4056.HEIC · 2026-11-25"
+    add_reverse: false
+    tags:
+      - topic::torts::coercive_control
+      - lens::definition
+      - jurisdiction::canada
+      - source::IMG_4056
+
+  - id: ipv-relationship-aftermath
+    type: qa
+    context: "Torts · IPV Coercive Control · Element 1"
+    front: "Why can post-separation abuse still satisfy element 1 of **IPV through coercive control**?"
+    back: "Because element 1 covers abusive conduct arising in the intimate partner relationship or its **aftermath**."
+    why_extra: "Per the card: separated parties ≠ intimate partner violence ended."
+    source_date: "IMG_4056.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::coercive_control
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4056
+
+  - id: ipv-intent-requirement
+    type: qa
+    context: "Torts · IPV Coercive Control · Element 2"
+    front: "What **intent** must D have for IPV through coercive control?"
+    back: "Only intent to engage in the **impugned conduct**—D need not intend coercive control or harm."
+    why_extra: "Matches the intent structure of classic intentional torts like battery and assault."
+    source_date: "IMG_4056.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::coercive_control
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4056
+
+  - id: ipv-objective-standard
+    type: qa
+    context: "Torts · IPV Coercive Control · Element 3"
+    front: "By what legal standard do courts assess whether abusive conduct constitutes **coercive control**?"
+    back: "An **objective** standard: whether a reasonable person, fully aware of the relevant context, would perceive it as coercive control."
+    why_extra: "Element 3 is met when contextualized perception of coercive control combines with abusive conduct."
+    source_date: "IMG_4056.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::coercive_control
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4056
+
+  - id: ipv-vulnerability-knowledge
+    type: qa
+    context: "Torts · IPV Coercive Control · Element 3"
+    front: "What specific **knowledge held by D** is factored into the objective contextual test for IPV coercive control?"
+    back: "D's knowledge of **P's vulnerability**."
+    why_extra: "An act that might seem minor in isolation can constitute coercive control when D knows and exploits P's particular vulnerability."
+    source_date: "IMG_4056.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::coercive_control
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4056
+
+  - id: app-ipv-post-separation
+    type: qa
+    context: "Torts · IPV Coercive Control · Application"
+    front: "After separating, D uses financial control and surveillance against ex-partner P, insisting the relationship is over—why does Element 1 still hold?"
+    back: "Separation does not cut off liability because the tort covers abusive conduct in the relationship or its **aftermath**."
+    why_extra: "Then check Element 2 (intent to do the impugned acts) and Element 3 (objective coercive control given D's knowledge of P's vulnerability)."
+    source_date: "IMG_4056.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::coercive_control
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4056
+
+  - id: contrast-ipv-vs-iims-intent
+    type: qa
+    context: "Torts · IPV Coercive Control vs. IIMS"
+    front: "How does D's required **intent toward harm or subordination** in IPV coercive control differ from IIMS?"
+    back: "IPV requires only intent to do the **impugned conduct**, whereas IIMS requires subjective **intent or substantial certainty** of harm."
+    why_extra: "On a domestic-abuse exam fact pattern, IPV coercive control avoids IIMS's high Element 2 mental-state barrier."
+    source_date: "IMG_4055.HEIC & IMG_4056.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::coercive_control
+      - topic::torts::iims
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4055
+      - source::IMG_4056
+
+  # =========================================================================
+  # 8. BC STATUTORY PRIVACY TORT (IMG_4057.HEIC & IMG_4058.HEIC)
+  # =========================================================================
+  - id: bc-privacy-no-damage
+    type: qa
+    context: "Torts · BC Privacy · Harm"
+    front: "What harm or damage must P prove under BC's **statutory privacy tort**?"
+    back: "**None**—it is actionable **without proof of damage**."
+    why_extra: "Like battery, BC's Privacy Act protects the privacy right per se without requiring financial or psychological injury."
+    source_date: "IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::boundary
+      - jurisdiction::bc
+      - source::IMG_4058
+
+  - id: bc-privacy-test-sequence-cloze
+    type: cloze
+    context: "Torts · BC Privacy · 3-Step Test"
+    text: "BC's 3-step statutory test asks: (1) Was P {{c1::entitled to privacy}}? (2) Did D violate it {{c2::wilfully}} without a claim of right? (3) Does any {{c3::s. 2 defence}} apply?"
+    why_extra: "Follow all three steps in sequence on a BC exam: entitlement → wilful violation without claim of right → s. 2 statutory defences."
+    source_date: "IMG_4057.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::element
+      - jurisdiction::bc
+      - source::IMG_4057
+
+  - id: bc-privacy-step1-entitlement
+    type: qa
+    context: "Torts · BC Privacy · Step 1"
+    front: "Under step 1 of BC's statutory privacy test (**was P entitled to privacy?**), what two questions must be answered?"
+    back: "Whether P held a **subjective** expectation of privacy, and whether it was **reasonable in all the circumstances**."
+    why_extra: "Both the subjective prong and the objective reasonableness prong must be satisfied before moving to Step 2."
+    source_date: "IMG_4057.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::element
+      - jurisdiction::bc
+      - source::IMG_4057
+
+  - id: bc-privacy-wilfully
+    type: qa
+    context: "Torts · BC Privacy · Step 2 (Fault)"
+    front: "How is **'wilfully'** defined under BC's statutory privacy tort?"
+    back: "D intended to violate privacy, or **knew / should have known** (at minimum, not accidental)."
+    why_extra: "Truly accidental intrusions fail 'wilfully', whereas knowing or negligent-to-the-obvious violations can satisfy it."
+    source_date: "IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::definition
+      - jurisdiction::bc
+      - source::IMG_4058
+
+  - id: bc-privacy-claim-of-right
+    type: qa
+    context: "Torts · BC Privacy · Step 2 (Claim of Right)"
+    front: "What does **'without a claim of right'** mean under BC's statutory privacy tort?"
+    back: "Lacking an **honest belief** in a state of facts that, **if it existed**, would be legal justification."
+    why_extra: "This protects an honest mistake of fact that would legally justify the act—not merely wishing the law were different."
+    source_date: "IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::definition
+      - jurisdiction::bc
+      - source::IMG_4058
+
+  - id: bc-privacy-nature-degree
+    type: qa
+    context: "Torts · BC Privacy · Nature & Degree (s. 1(2))"
+    front: "Under BC's *Privacy Act*, what balances the **nature and degree** of privacy to which P is entitled?"
+    back: "Reasonableness in the circumstances—giving due regard to others' **lawful interests**, plus both the type and **use** of the info."
+    why_extra: "Context matters heavily: courts balance P's privacy expectation against lawful competing interests and how the information is used."
+    source_date: "IMG_4057.HEIC & IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::mechanism
+      - jurisdiction::bc
+      - source::IMG_4057
+      - source::IMG_4058
+
+  - id: bc-privacy-violation-factors
+    type: qa
+    context: "Torts · BC Privacy · Determining Violation (s. 1(3))"
+    front: "When determining whether D's **act or conduct is a violation** under BC's *Privacy Act*, what contextual factors must courts consider?"
+    back: "The **nature, incidence, and occasion** of the act, and any **domestic or other relationship** between the parties."
+    why_extra: "Distinguish s. 1(2) (nature/degree of privacy entitled, balanced against lawful interests) from s. 1(3) (factors deciding whether the specific act violated it)."
+    source_date: "IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::element
+      - jurisdiction::bc
+      - source::IMG_4058
+
+  - id: bc-privacy-eavesdropping
+    type: qa
+    context: "Torts · BC Privacy · Eavesdropping"
+    front: "Why can off-property **eavesdropping** still violate BC's statutory privacy tort?"
+    back: "Because privacy may be violated by eavesdropping **whether or not** it is done through a trespass."
+    why_extra: "Statutory privacy covers modern listening devices and surveillance that never physically cross P's property line."
+    source_date: "IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::boundary
+      - jurisdiction::bc
+      - source::IMG_4058
+
+  - id: bc-privacy-s2-private-defences
+    type: qa
+    context: "Torts · BC Privacy · s. 2(a)–(b) Defences"
+    front: "What two **private-party defences** excuse a privacy violation under s. 2(a)–(b) of BC's *Privacy Act*?"
+    back: "(a) **Consent**, and (b) an act incidental to exercising a lawful right of **defence of person or property**."
+    why_extra: "For example, recording an intruder to protect one's home can fall under s. 2(b) if genuinely incidental to lawful defence of property."
+    source_date: "IMG_4057.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::defence
+      - jurisdiction::bc
+      - source::IMG_4057
+
+  - id: bc-privacy-s2c-legal-auth
+    type: qa
+    context: "Torts · BC Privacy · s. 2(c) Defence"
+    front: "What defence exists under **s. 2(c)** of BC's *Privacy Act*?"
+    back: "The act is authorized under **law or a court**."
+    why_extra: "Covers court-ordered surveillance, warrants, or statutory authorizations."
+    source_date: "IMG_4057.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::defence
+      - jurisdiction::bc
+      - source::IMG_4057
+
+  - id: bc-privacy-s2d-officers
+    type: qa
+    context: "Torts · BC Privacy · s. 2(d) Defences"
+    front: "Which two **officer** categories have a defence under s. 2(d) of BC's *Privacy Act*?"
+    back: "(i) A **peace officer** in the course of duty, and (ii) a **public officer** engaged in an investigation under law in the course of duty."
+    why_extra: "Both s. 2(d)(i) and s. 2(d)(ii) require the officer to be acting within the lawful course of their duty."
+    source_date: "IMG_4057.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::defence
+      - jurisdiction::bc
+      - source::IMG_4057
+
+  - id: app-bc-privacy-claim-of-right
+    type: qa
+    context: "Torts · BC Privacy · Application"
+    front: "D deliberately accesses P's private medical file, honestly (but mistakenly) believing P signed a valid consent form—which **BC *Privacy Act*** prong does this defeat?"
+    back: "**Without a claim of right**—an honest belief in a state of facts that, if it existed, would legally justify the act defeats liability."
+    why_extra: "If P had actually consented, s. 2(a) would legally justify the access; an honest mistake of fact about consent establishes a claim of right even if D ought to have double-checked ('wilfully')."
+    source_date: "IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - lens::application
+      - jurisdiction::bc
+      - source::IMG_4058
+
+  # =========================================================================
+  # 9. PUBLIC DISCLOSURE OF PRIVATE FACTS (IMG_4061.HEIC)
+  # =========================================================================
+  - id: public-disclosure-elements-cloze
+    type: cloze
+    context: "Torts · Public Disclosure of Private Facts"
+    text: "Public disclosure requires D to publicize an aspect of P's private life {{c1::without consent}} where the matter or {{c2::its publication}} is highly offensive and lacks {{c3::legitimate public concern}}."
+    why_extra: "Note the disjunctive prong in Element 3: either the matter publicized OR its publication being highly offensive to a reasonable person in P's position suffices."
+    source_date: "IMG_4061.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4061
+
+  - id: public-disclosure-standards
+    type: qa
+    context: "Torts · Public Disclosure · Standards"
+    front: "In public disclosure of private facts, how does the standard for **'private'** differ from **'highly offensive'**?"
+    back: "'Private' uses an objective **reasonable person** test; 'highly offensive' views a reasonable person **in P's position** (seems more subjective/contextualized)."
+    why_extra: "The handwritten note flags '(seems more subjective standard?)' because placing the reasonable person specifically 'in P's position' contextualizes the test."
+    source_date: "IMG_4061.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4061
+
+  - id: public-disclosure-harm
+    type: qa
+    context: "Torts · Public Disclosure · Harm"
+    front: "What **damages or harm** must P prove in public disclosure of private facts?"
+    back: "**None**—no proof of damages or harm is required."
+    why_extra: "Like battery and BC's statutory privacy tort, P succeeds once the four disclosure elements are established."
+    source_date: "IMG_4061.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4061
+
+  - id: app-public-disclosure-public-concern
+    type: qa
+    context: "Torts · Public Disclosure · Application"
+    front: "A journalist publishes a cabinet minister's secret conflict-of-interest financial records without consent—why does **public disclosure of private facts** fail?"
+    back: "The disclosure is a matter of **legitimate public concern**, which defeats element 4 even without consent."
+    why_extra: "Contrast with leaking a private citizen's intimate photos: no legitimate public concern, highly offensive, and actionable without proof of harm."
+    source_date: "IMG_4061.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4061
+
+  - id: contrast-public-disclosure-vs-intrusion-act
+    type: qa
+    context: "Torts · Public Disclosure vs. ONT Intrusion · Act"
+    front: "How does the **core wrongful act** in public disclosure of private facts differ from Ontario's intrusion upon seclusion?"
+    back: "Public disclosure targets non-consensual **publication** of private facts; intrusion upon seclusion targets the unauthorized **invasion** itself."
+    why_extra: "Snooping through a medical file without sharing it is intrusion upon seclusion; posting private details online is public disclosure."
+    source_date: "IMG_4061.HEIC & IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - topic::torts::intrusion_upon_seclusion
+      - lens::contrast
+      - jurisdiction::canada
+      - jurisdiction::ontario
+      - source::IMG_4061
+      - source::IMG_4062
+
+  - id: contrast-public-disclosure-vs-intrusion-standard
+    type: qa
+    context: "Torts · Public Disclosure vs. ONT Intrusion · Standard"
+    front: "How does the **'highly offensive'** standard differ between public disclosure of private facts and Ontario's intrusion upon seclusion?"
+    back: "Public disclosure views a reasonable person **in P's position**, whereas Ontario's intrusion uses a pure **objective** test."
+    why_extra: "Placing the reasonable person 'in P's position' makes public disclosure's offensiveness test more contextualized than Ontario's pure objective intrusion test."
+    source_date: "IMG_4061.HEIC & IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - topic::torts::intrusion_upon_seclusion
+      - lens::contrast
+      - jurisdiction::canada
+      - jurisdiction::ontario
+      - source::IMG_4061
+      - source::IMG_4062
+
+  - id: contrast-public-disclosure-vs-intrusion-limit
+    type: qa
+    context: "Torts · Public Disclosure vs. ONT Intrusion · Limit"
+    front: "How does the **justification or public-interest limit** differ between public disclosure of private facts and Ontario's intrusion upon seclusion?"
+    back: "Public disclosure is barred by **legitimate public concern**; Ontario's intrusion is barred by **lawful justification**."
+    why_extra: "Keep both privacy limits sharp on exams: publication + public-concern limit vs. invasion + lawful-justification limit."
+    source_date: "IMG_4061.HEIC & IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - topic::torts::intrusion_upon_seclusion
+      - lens::contrast
+      - jurisdiction::canada
+      - jurisdiction::ontario
+      - source::IMG_4061
+      - source::IMG_4062
+
+  # =========================================================================
+  # 10. ONTARIO: INTRUSION UPON SECLUSION (IMG_4062.HEIC)
+  # =========================================================================
+  - id: intrusion-elements-cloze
+    type: cloze
+    context: "Torts · Intrusion upon Seclusion (ONT)"
+    text: "Ontario's intrusion upon seclusion requires {{c1::intentional or reckless}} invasion of P's private affairs or concerns {{c2::without lawful justification}}, objectively regarded as {{c3::highly offensive}} (causing distress, humiliation, or anguish)."
+    why_extra: "Recklessness is explicitly included under Element 1—D need not act with deliberate malice."
+    source_date: "IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::intrusion_upon_seclusion
+      - lens::element
+      - jurisdiction::ontario
+      - source::IMG_4062
+
+  - id: intrusion-objective-standards
+    type: qa
+    context: "Torts · Intrusion upon Seclusion (ONT) · Standards"
+    front: "In Ontario's intrusion upon seclusion, what standard governs **privacy expectations** and **'highly offensive'**?"
+    back: "Both are assessed **objectively**—requiring an objective privacy expectation and a significant invasion."
+    why_extra: "Minor or trivial intrusions fail the objective 'highly offensive / significant invasion' threshold."
+    source_date: "IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::intrusion_upon_seclusion
+      - lens::boundary
+      - jurisdiction::ontario
+      - source::IMG_4062
+
+  - id: intrusion-distress-presumption
+    type: qa
+    context: "Torts · Intrusion upon Seclusion (ONT) · Harm"
+    front: "In Ontario's intrusion upon seclusion, how is **distress, humiliation, or anguish** established once the other elements are proven?"
+    back: "It is **generally presumed** once the other elements are proven."
+    why_extra: "P does not fail merely for lacking proof of economic loss or independent psychiatric evidence."
+    source_date: "IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::intrusion_upon_seclusion
+      - lens::mechanism
+      - jurisdiction::ontario
+      - source::IMG_4062
+
+  - id: contrast-bc-vs-ont-privacy-fault
+    type: qa
+    context: "Torts · BC Privacy vs. ONT Intrusion · Fault"
+    front: "How does the required **fault** in Ontario's intrusion upon seclusion compare to BC's statutory privacy tort?"
+    back: "Ontario requires **intentional or reckless** conduct; BC requires a **wilful** violation (intended or knew/should have known) without claim of right."
+    why_extra: "Notice BC's 'wilfully' still reaches 'knew or should have known (at minimum not accidental)', paired with absence of a claim of right."
+    source_date: "IMG_4058.HEIC & IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - topic::torts::intrusion_upon_seclusion
+      - lens::contrast
+      - jurisdiction::bc
+      - jurisdiction::ontario
+      - source::IMG_4058
+      - source::IMG_4062
+
+  - id: contrast-bc-vs-ont-privacy-threshold
+    type: qa
+    context: "Torts · BC Privacy vs. ONT Intrusion · Threshold"
+    front: "How does the **severity threshold** in Ontario's intrusion upon seclusion differ from BC's statutory privacy tort?"
+    back: "Ontario requires a **highly offensive** (significant) invasion; BC weighs reasonable privacy expectations against others' **lawful interests**."
+    why_extra: "BC uses its statutory Privacy Act rather than Ontario's common-law intrusion upon seclusion tort."
+    source_date: "IMG_4058.HEIC & IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - topic::torts::intrusion_upon_seclusion
+      - lens::contrast
+      - jurisdiction::bc
+      - jurisdiction::ontario
+      - source::IMG_4058
+      - source::IMG_4062
+
+  # =========================================================================
+  # 11. CONVERSION (IMG_4059.HEIC)
+  # =========================================================================
+  - id: conversion-elements-cloze
+    type: cloze
+    context: "Torts · Conversion"
+    text: "Conversion requires {{c1::a positive act}} (without lawful justification; intent not required) involving another's {{c2::chattel}} so as to deny or negate {{c3::title}}."
+    why_extra: "Element 3 examples of interference: handling, transferring, disposing of, destroying, or damaging the goods of another."
+    source_date: "IMG_4059.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::conversion
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4059
+
+  - id: conversion-wrongful-act-justification
+    type: qa
+    context: "Torts · Conversion · Element 1"
+    front: "What makes D's handling of chattel a **'wrongful act'** under element 1 of conversion?"
+    back: "A **positive act** done **without lawful justification** (wrongful intent is not required)."
+    why_extra: "Pure omission does not establish conversion; D must commit a positive unauthorized act interfering with another's goods."
+    source_date: "IMG_4059.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::conversion
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4059
+
+  - id: conversion-dominion
+    type: qa
+    context: "Torts · Conversion · Element 4"
+    front: "What does **'exercising dominion'** mean in the tort of conversion?"
+    back: "Seriously interfering with the owner's **right of possession** in a way that denies or negates their title to the chattel."
+    why_extra: "Conversion treats D as having effectively forced a sale of the goods by acting as if D owned them."
+    source_date: "IMG_4059.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::conversion
+      - lens::definition
+      - jurisdiction::canada
+      - source::IMG_4059
+
+  - id: conversion-mere-use-boundary
+    type: qa
+    context: "Torts · Conversion · Boundary"
+    front: "Why does merely moving or changing the location of someone's chattel usually fail **conversion**?"
+    back: "Unless serious enough to show intent to **exercise dominion**, mere moving or use does not negate title."
+    why_extra: "Minor temporary interference without denying title does not rise to conversion."
+    source_date: "IMG_4059.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::conversion
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4059
+
+  - id: app-conversion-good-faith-buyer
+    type: qa
+    context: "Torts · Conversion · Application"
+    front: "D innocently buys a stolen bicycle in good faith and resells it—why is D still liable for **conversion**?"
+    back: "Conversion requires only a **positive act** without lawful justification that negates title—**wrongful intent** or knowledge of theft is not required."
+    why_extra: "Reselling exercises dominion over the true owner's chattel, even when D acted in complete good faith."
+    source_date: "IMG_4059.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::conversion
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4059
+
+  - id: contrast-conversion-vs-trespass-intent
+    type: qa
+    context: "Torts · Conversion vs. Trespass to Land"
+    front: "How does the required **fault** in conversion compare to trespass to land?"
+    back: "Conversion requires a **positive wrongful act** (intent not required); trespass to land requires **intentional** conduct focused on physical consequences."
+    why_extra: "In conversion, Element 4 can be met by either the intention to OR the practical effect of denying/negating title."
+    source_date: "IMG_4059.HEIC & IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::conversion
+      - topic::torts::trespass_to_land
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4059
+      - source::IMG_4060
+
+  # =========================================================================
+  # 12. TRESPASS TO LAND (IMG_4060.HEIC)
+  # =========================================================================
+  - id: trespass-land-definition
+    type: qa
+    context: "Torts · Property Torts"
+    front: "What is the legal definition of **trespass to land**?"
+    back: "An intentional, direct physical **interference with land** in another's possession without lawful justification."
+    why_extra: "Protects **possession** of land (e.g., a tenant in possession can sue), not merely registered title."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    add_reverse: true
+    tags:
+      - topic::torts::trespass_to_land
+      - lens::definition
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  - id: trespass-land-elements-cloze
+    type: cloze
+    context: "Torts · Trespass to Land"
+    text: "Trespass to land requires (1) {{c1::intentional}} conduct causing (2) {{c2::direct}} and (3) {{c3::physical}} interference with another's land."
+    why_extra: "Intent focuses on the conduct's physical consequences—D need not know the land belongs to P."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::trespass_to_land
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  - id: trespass-land-physical-interference
+    type: qa
+    context: "Torts · Trespass to Land · Element 3"
+    front: "What counts as **physical interference** under element 3 of trespass to land?"
+    back: "**Physical presence** of D or an **object** placed or left by D on P's land."
+    why_extra: "Physical intrusion by either D personally or an object D places/leaves satisfies Element 3."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::trespass_to_land
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  - id: trespass-land-hickey-minimal
+    type: qa
+    context: "Torts · Trespass to Land · Threshold"
+    front: "How slight can physical interference be in trespass to land, and what **case** illustrates this?"
+    back: "Interference can be **minimal** (*Hickey*)."
+    why_extra: "Even a tiny physical intrusion by D or an object satisfies trespass to land."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::trespass_to_land
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  - id: trespass-direct-vs-consequential
+    type: qa
+    context: "Torts · Trespass to Land · Directness"
+    front: "What distinguishes **direct** interference (trespass to land) from **consequential** interference (e.g., gradual seepage)?"
+    back: "Direct interference is an **immediate** consequence of force set in motion by D, not an indirect or gradual result."
+    why_extra: "Indirect or gradual harms typically belong under nuisance or negligence rather than trespass to land."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::trespass_to_land
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  - id: trespass-continuing-vs-consequence
+    type: qa
+    context: "Torts · Trespass to Land · Continuing Trespass"
+    front: "How does a **continuing trespass** differ from a mere **consequence of trespass**?"
+    back: "Leaving an **object** on P's land continues until removed; a lasting mark of past entry (e.g., a **hole**) is only a consequence."
+    why_extra: "A continuing trespass renews the cause of action each day the object stays unremoved, which matters for limitation periods."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::trespass_to_land
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  - id: app-trespass-trench-vs-bulldozer
+    type: qa
+    context: "Torts · Trespass to Land · Application"
+    front: "D trespasses, digs a trench on P's land, and leaves—why is the unfilled trench **not** a continuing trespass (unlike leaving a bulldozer behind)?"
+    back: "The trench is a lasting **consequence of past trespass**, whereas leaving an **object** on P's land continues daily until removed."
+    why_extra: "Key exam issue: limitation clocks keep resetting for an unremoved object, but run from the original entry for a dug hole."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::trespass_to_land
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  # =========================================================================
+  # 13. FRAUD / CIVIL DECEIT (IMG_4063.HEIC)
+  # =========================================================================
+  - id: fraud-representation-element
+    type: qa
+    context: "Torts · Fraud · Element 1"
+    front: "Under element 1 of civil **fraud**, what kind of statement must P prove and how is its falsity assessed?"
+    back: "A **false factual representation**, with falsity assessed **objectively** (onus on P)."
+    why_extra: "Pure opinion or puffery is not a factual representation; P bears the initial burden of proving objective falsity."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4063
+
+  - id: fraud-fault-element
+    type: qa
+    context: "Torts · Fraud · Element 2 (Fault)"
+    front: "What two **fault states** satisfy element 2 of civil fraud?"
+    back: "D **knew** the statement was false, or was **reckless** as to its truth."
+    why_extra: "Mere carelessness does not satisfy Element 2—D must either know the statement is false or act recklessly as to its truth."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4063
+
+  - id: fraud-honest-belief-test
+    type: qa
+    context: "Torts · Fraud · Element 2 (Standard)"
+    front: "By what **subjective test** do courts assess D's knowledge or recklessness under element 2 of civil fraud?"
+    back: "Whether D subjectively held an **honest belief** in the statement's truth."
+    why_extra: "Both knowledge of falsity and recklessness turn subjectively on the representor's lack of honest belief."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::mechanism
+      - jurisdiction::canada
+      - source::IMG_4063
+
+  - id: fraud-recklessness-vs-negligence
+    type: qa
+    context: "Torts · Fraud · Recklessness vs. Negligence"
+    front: "In civil fraud, how does actionable **recklessness** differ from non-actionable **negligence**?"
+    back: "Negligence is not enough; recklessness requires **dishonest indifference** to accuracy or **pretending to know** when D does not."
+    why_extra: "If D genuinely held an honest (even careless) belief in the statement's truth, civil fraud fails—pivot to negligent misrepresentation."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4063
+
+  - id: fraud-intent-to-induce
+    type: qa
+    context: "Torts · Fraud · Element 3"
+    front: "How is element 3 of civil **fraud** (D intended P to act on the false representation) usually proven?"
+    back: "Usually inferred from the **surrounding circumstances**, rather than direct proof of D's state of mind."
+    why_extra: "Defendants rarely admit intending to deceive, so courts infer intent to induce from the transactional context."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::mechanism
+      - jurisdiction::canada
+      - source::IMG_4063
+
+  - id: fraud-reliance-causation
+    type: qa
+    context: "Torts · Fraud · Elements 4–5"
+    front: "What must P prove to satisfy **material reliance** and loss in civil fraud?"
+    back: "D's statement induced P to **alter their position** (need not be the only cause), and that reliance resulted in **loss**."
+    why_extra: "Even when P had additional reasons to enter a deal, fraud succeeds if D's false statement materially induced the alteration of position and caused loss."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4063
+
+  - id: fraud-bc-reliance-test
+    type: qa
+    context: "Torts · Fraud · BC Standard Contrast"
+    front: "In **BC** civil fraud, how does the standard for **material inducement** (element 4) differ from D's fault (element 2)?"
+    back: "Element 4 uses an **objective** test in BC, whereas element 2 tests D's **subjective** honest belief."
+    why_extra: "Contrast Element 2 (subjective honest belief held by D) with Element 4 in BC (objective inducement/reliance test)."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::contrast
+      - jurisdiction::bc
+      - source::IMG_4063
+
+  - id: app-fraud-honest-careless-seller
+    type: qa
+    context: "Torts · Fraud · Application"
+    front: "Seller D carelessly misstates a roof's age while genuinely believing it is true—why does civil **fraud** fail?"
+    back: "D held a subjectively **honest belief**, defeating both knowledge of falsity and **dishonest indifference** (negligence alone is insufficient)."
+    why_extra: "Exam pivot: when an inaccurate statement is careless rather than dishonest, analyze negligent misrepresentation instead of civil fraud."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4063
+
+  # =========================================================================
+  # 14. UNLAWFUL MEANS TORT (IMG_4064.HEIC)
+  # =========================================================================
+  - id: unlawful-means-elements-cloze
+    type: cloze
+    context: "Torts · Unlawful Means Tort"
+    text: "The unlawful means tort requires D to commit an actionable civil wrong against a {{c1::third party}} with {{c2::specific intent}} (when acting) to cause {{c3::economic harm}} to P."
+    why_extra: "Three-party structure: D strikes at P indirectly by committing an actionable civil wrong against a third party, causing economic harm to P."
+    source_date: "IMG_4064.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4064
+
+  - id: unlawful-means-definition-unlawful
+    type: qa
+    context: "Torts · Unlawful Means · Element 1"
+    front: "What narrows the definition of an **'unlawful act'** in the unlawful means tort?"
+    back: "Conduct giving rise to a **civil action** by the third party (or that would if the third party suffered loss)."
+    why_extra: "Regulatory breaches or crimes that do not support a private civil claim by the third party do not qualify."
+    source_date: "IMG_4064.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4064
+
+  - id: unlawful-means-specific-intent
+    type: qa
+    context: "Torts · Unlawful Means · Element 3 (Included)"
+    front: "What **specific intent** satisfies element 3 of the unlawful means tort?"
+    back: "Intending economic harm to P as an **end in itself** or a **necessary means** to achieve an end serving an ulterior motive."
+    why_extra: "D must hold this intent when committing the unlawful act against the third party."
+    source_date: "IMG_4064.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4064
+
+  - id: unlawful-means-excluded-states
+    type: qa
+    context: "Torts · Unlawful Means · Element 3 (Excluded)"
+    front: "What three mental states are explicitly **excluded** from element 3 of the unlawful means tort?"
+    back: "**Inevitable consequences** without specific intent, **knowledge it will probably cause harm**, and recklessness as to harm."
+    why_extra: "Foreseen collateral economic damage to P is not enough—D must specifically target P's economic harm as an end or necessary means."
+    source_date: "IMG_4064.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - lens::boundary
+      - jurisdiction::canada
+      - source::IMG_4064
+
+  - id: app-unlawful-means-regulatory-breach
+    type: qa
+    context: "Torts · Unlawful Means · Application"
+    front: "D intentionally breaches a **licensing regulation** when dealing with a supplier to bankrupt competitor P—why does the unlawful means tort fail?"
+    back: "An unlawful act must support a **civil action** by the third party; mere regulatory or criminal breaches do not qualify."
+    why_extra: "Even when D specifically intends to ruin P, Element 1 fails unless the third party has an actionable civil claim (or would if it suffered loss)."
+    source_date: "IMG_4064.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - lens::application
+      - jurisdiction::canada
+      - source::IMG_4064
+
+  - id: contrast-unlawful-means-vs-iims-intent
+    type: qa
+    context: "Torts · Unlawful Means vs. IIMS"
+    front: "If D knows harm to P is an **inevitable side-effect** (not D's goal or necessary means), why does this satisfy IIMS yet fail the unlawful means tort?"
+    back: "IIMS imputes intent from **substantial certainty**; unlawful means excludes inevitable collateral harm without **specific intent** targeting P."
+    why_extra: "Unlawful means has the strictest intent gate in this deck—even higher than IIMS Element 2."
+    source_date: "IMG_4055.HEIC & IMG_4064.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - topic::torts::iims
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4055
+      - source::IMG_4064
+
+  - id: contrast-unlawful-means-vs-inducing-breach
+    type: qa
+    context: "Torts · Unlawful Means vs. Inducing Breach"
+    front: "How does the **unlawful means tort** differ from **inducing breach of contract** in what D does to the third party?"
+    back: "Unlawful means requires an independently **actionable civil wrong** against the third party; inducing breach requires procuring a **breach of contract** with P."
+    why_extra: "Inducing breach is accessory liability for a contract breach; unlawful means is primary liability for targeting P via a civil wrong against a third party."
+    source_date: "IMG_4064.HEIC & IMG_4065.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - topic::torts::inducing_breach
+      - lens::contrast
+      - jurisdiction::canada
+      - source::IMG_4064
+      - source::IMG_4065
+
+  # =========================================================================
+  # 15. INDUCING BREACH OF CONTRACT (IMG_4065.HEIC)
+  # =========================================================================
+  - id: inducing-breach-prerequisites
+    type: qa
+    context: "Torts · Inducing Breach of Contract · Prerequisites"
+    front: "Aside from D's mental state and defences, what four **objective elements** (elements 1–3, 7) must P prove for inducing breach of contract?"
+    back: "A **valid contract** between P and a 3rd party, a **breach** caused by D's acts, and resulting damage to P."
+    why_extra: "Covers Elements 1, 2, 3, and 7: without a valid existing contract, an actual breach caused by D, and damage, the claim fails."
+    source_date: "IMG_4065.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::inducing_breach
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4065
+
+  - id: inducing-breach-knowledge
+    type: qa
+    context: "Torts · Inducing Breach of Contract · Knowledge"
+    front: "What two **knowledge** elements (elements 4–5) must P prove against D for inducing breach of contract?"
+    back: "D was **aware of the contract** and **knew** D was inducing a breach of it."
+    why_extra: "Accidentally disrupting a contract D did not know existed—or did not know would be breached—fails liability."
+    source_date: "IMG_4065.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::inducing_breach
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4065
+
+  - id: inducing-breach-intent
+    type: qa
+    context: "Torts · Inducing Breach of Contract · Intent"
+    front: "What **intent** (element 6) must D have for inducing breach of contract?"
+    back: "Intent to **procure the breach**—as a desired end or a means to an end."
+    why_extra: "Like unlawful means, foreseeing that a breach might incidentally happen without intending to procure it is insufficient."
+    source_date: "IMG_4065.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::inducing_breach
+      - lens::element
+      - jurisdiction::canada
+      - source::IMG_4065
+
+  - id: inducing-breach-justification-defence
+    type: qa
+    context: "Torts · Inducing Breach of Contract · Defence"
+    front: "What two **examples** support D's defence of justification in inducing breach of contract?"
+    back: "Giving **professional advice**, or acting in good faith to protect D's own **legitimate economic rights** (e.g., rights equal or superior to P's)."
+    why_extra: "Justification is a defence raised by D (Element 8); the handwritten note marks 'maybe rights equal to or superior than those of P' as an illustrative example."
+    source_date: "IMG_4065.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::inducing_breach
+      - lens::defence
+      - jurisdiction::canada
+      - source::IMG_4065
+
+  - id: contrast-damage-requirement-economic-vs-perse
+    type: qa
+    context: "Torts · Proof of Damage Contrast"
+    front: "How does the **proof of damage** requirement in inducing breach of contract and fraud differ from battery and BC's privacy tort?"
+    back: "Inducing breach and fraud require proof of **actual damage or loss**, whereas battery and BC's privacy tort are actionable **without proof of harm**."
+    why_extra: "Quick exam check: no-damage-required torts in this deck include Battery, BC Statutory Privacy, and Public Disclosure of Private Facts (plus presumed distress in ONT Intrusion)."
+    source_date: "IMG_4051, 4058, 4063, 4065 · 2026-11-25"
+    tags:
+      - topic::torts::inducing_breach
+      - topic::torts::fraud
+      - topic::torts::battery
+      - topic::torts::bc_privacy
+      - lens::contrast
+      - jurisdiction::canada
+      - jurisdiction::bc
+      - source::IMG_4051
+      - source::IMG_4058
+      - source::IMG_4063
+      - source::IMG_4065
