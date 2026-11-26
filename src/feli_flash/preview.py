@@ -146,6 +146,8 @@ def generate_preview_html(
     output_path: str | Path,
     *,
     apkg_href: str | None = None,
+    alt_link_label: str | None = None,
+    alt_link_href: str | None = None,
 ) -> Path:
     """Render an interactive standalone HTML preview for reviewing or test-driving cards."""
     out = Path(output_path).expanduser().resolve()
@@ -172,9 +174,29 @@ def generate_preview_html(
         for tag in card.tags:
             if tag.startswith("lens::"):
                 lens_counts[tag] = lens_counts.get(tag, 0) + 1
-    lens_options = "".join(
-        f'<option value="{html.escape(l, quote=True)}">{html.escape(l.replace("lens::", "").title())} ({lens_counts[l]})</option>'
-        for l in sorted(lens_counts.keys())
+    lens_select = (
+        f'<select id="lensFilter"><option value="">All lenses</option>'
+        + "".join(
+            f'<option value="{html.escape(l, quote=True)}">{html.escape(l.replace("lens::", "").title())} ({lens_counts[l]})</option>'
+            for l in sorted(lens_counts.keys())
+        )
+        + "</select>"
+        if len(lens_counts) > 1
+        else ""
+    )
+
+    distinct_types = {card.card_type for card in spec.cards}
+    type_select = (
+        '<select id="typeFilter"><option value="">All types</option>'
+        '<option value="qa">Q&amp;A</option><option value="cloze">Cloze</option></select>'
+        if len(distinct_types) > 1
+        else ""
+    )
+
+    alt_btn = (
+        f'<a class="pv-alt-btn" href="{html.escape(alt_link_href, quote=True)}">{html.escape(alt_link_label)}</a>'
+        if alt_link_label and alt_link_href
+        else ""
     )
 
     download_btn = (
@@ -183,11 +205,12 @@ def generate_preview_html(
         else ""
     )
 
-    qa_status = (
-        f"QA Gates: PASS ({len(audit.warnings)} warnings)"
-        if audit.passed
-        else f"QA Gates: {len(audit.errors)} error(s), {len(audit.warnings)} warning(s)"
-    )
+    subtitle_parts = [f"Q&amp;A: {audit.qa_count}"]
+    if audit.reverse_count:
+        subtitle_parts.append(f"Reverse: {audit.reverse_count}")
+    if audit.cloze_count:
+        subtitle_parts.append(f"Cloze: {audit.cloze_count}")
+    subtitle = " · ".join(subtitle_parts)
 
     page = f"""<!doctype html>
 <html lang="en">
@@ -229,7 +252,7 @@ def generate_preview_html(
     .pv-title {{ font-size: 18px; font-weight: 700; margin: 0; }}
     .pv-subtitle {{ font-size: 13px; color: #64748b; margin-top: 2px; }}
     .pv-controls {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }}
-    .pv-controls input, .pv-controls select, .pv-controls button, .pv-download-btn {{
+    .pv-controls input, .pv-controls select, .pv-controls button, .pv-download-btn, .pv-alt-btn {{
       font-size: 14px;
       padding: 6px 11px;
       border-radius: 8px;
@@ -240,12 +263,16 @@ def generate_preview_html(
     }}
     body.nightMode .pv-controls input,
     body.nightMode .pv-controls select,
-    body.nightMode .pv-controls button {{
+    body.nightMode .pv-controls button,
+    body.nightMode .pv-alt-btn {{
       background: #1a1f2b;
       border-color: #334155;
       color: #e2e8f0;
     }}
     .pv-controls button {{ cursor: pointer; font-weight: 600; }}
+    .pv-alt-btn {{ font-weight: 600; }}
+    .pv-alt-btn:hover {{ border-color: #1d4ed8; color: #1d4ed8; }}
+    body.nightMode .pv-alt-btn:hover {{ border-color: #93c5fd; color: #93c5fd; }}
     .pv-controls button.active {{
       background: #1d4ed8;
       border-color: #1d4ed8;
@@ -358,7 +385,7 @@ def generate_preview_html(
   <div class="pv-toolbar">
     <div>
       <h1 class="pv-title">{html.escape(spec.name)} — {len(spec.cards)} notes ({total_cards} cards)</h1>
-      <div class="pv-subtitle">{html.escape(qa_status)} · Q&amp;A: {audit.qa_count} (Reverse: {audit.reverse_count}) · Cloze: {audit.cloze_count}</div>
+      <div class="pv-subtitle">{subtitle}</div>
     </div>
     <div class="pv-controls">
       <input id="search" type="search" placeholder="Search cards or tags...">
@@ -366,17 +393,11 @@ def generate_preview_html(
         <option value="">All topics ({len(spec.cards)})</option>
         {topic_options}
       </select>
-      <select id="lensFilter">
-        <option value="">All lenses</option>
-        {lens_options}
-      </select>
-      <select id="typeFilter">
-        <option value="">All types</option>
-        <option value="qa">Q&amp;A</option>
-        <option value="cloze">Cloze</option>
-      </select>
+      {lens_select}
+      {type_select}
       <button id="studyToggle" type="button">Study Mode</button>
       <button id="themeToggle" type="button">Dark Mode</button>
+      {alt_btn}
       {download_btn}
     </div>
   </div>
@@ -402,8 +423,8 @@ def generate_preview_html(
     function applyFilter() {{
       const q = search.value.trim().toLowerCase();
       const tp = topicFilter.value;
-      const ln = lensFilter.value;
-      const ty = typeFilter.value;
+      const ln = lensFilter ? lensFilter.value : '';
+      const ty = typeFilter ? typeFilter.value : '';
       let shown = 0;
       for (const el of items) {{
         const matchTopic = !tp || el.dataset.topic.split(' ').includes(tp);
@@ -419,8 +440,8 @@ def generate_preview_html(
 
     search.addEventListener('input', applyFilter);
     topicFilter.addEventListener('change', applyFilter);
-    lensFilter.addEventListener('change', applyFilter);
-    typeFilter.addEventListener('change', applyFilter);
+    if (lensFilter) lensFilter.addEventListener('change', applyFilter);
+    if (typeFilter) typeFilter.addEventListener('change', applyFilter);
 
     studyToggle.addEventListener('click', () => {{
       const on = document.body.classList.toggle('study-mode');

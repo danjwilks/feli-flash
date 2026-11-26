@@ -1,0 +1,299 @@
+# Canadian Tort Law — Core Elements & Legal Tests (Bare Minimum)
+# Converted from 16 handwritten study cards (IMG_4050.HEIC - IMG_4065.HEIC)
+# Goal: Learn the bare-minimum courtroom elements / test to succeed on each claim first (17 cards total).
+# Pair with the Full Deep Dive deck (decks/tort-law.yaml) once these core tests are memorized.
+
+deck:
+  name: "Canadian Tort Law — Elements & Tests"
+  description: >-
+    Bare-minimum courtroom elements and legal tests for 15 Canadian torts (17 cards total).
+    Start here to memorize the exact criteria to succeed on a claim before moving to the
+    Full Deep Dive deck (contrasts, boundaries, and fact patterns).
+  tags:
+    - canadian_law
+    - core_elements
+
+cards:
+  # 1. BATTERY (IMG_4051.HEIC)
+  - id: elem-battery
+    type: qa
+    context: "Tort Elements · Person"
+    front: "What are the **3 elements** required to prove **battery**?"
+    back: |
+      1. D **intentionally** inflicts
+      2. **Harmful or offensive** contact (objectively assessed)
+      3. With **P's body**
+    why_extra: "*Per se* tort (no proof of harm required). Must go beyond ordinary/generally acceptable social intercourse; once contact is shown, burden shifts to D to prove/raise a defence."
+    source_date: "IMG_4051.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::battery
+      - jurisdiction::canada
+      - source::IMG_4051
+
+  # 2. ASSAULT (IMG_4053.HEIC)
+  - id: elem-assault
+    type: qa
+    context: "Tort Elements · Person"
+    front: "What are the **4 elements** required to prove **assault**?"
+    back: |
+      1. D **intentionally** causes P
+      2. A **reasonable apprehension / fear** (objective)
+      3. Of **imminent** (discrete, with actual means)
+      4. **Unlawful** (harmful or offensive) physical contact
+    why_extra: "Intent is to put P in fear/expectation of battery (not intent to commit the battery). Only discrete instances (not cumulative); threat without actual means ≠ imminence."
+    source_date: "IMG_4053.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::assault
+      - jurisdiction::canada
+      - source::IMG_4053
+
+  # 3. FALSE IMPRISONMENT (IMG_4052.HEIC)
+  - id: elem-false-imprisonment
+    type: qa
+    context: "Tort Elements · Person"
+    front: "What are the **3 elements** required to prove **false imprisonment**?"
+    back: |
+      1. P was **totally** restrained (no reasonable means of escape)
+      2. **Deprived of liberty** (physical or psychological; reasonable person in P's position feels no choice)
+      3. Caused **directly** by D (against P's will; "but-for" causation)
+    why_extra: "Not enough to show mere contribution or influence—must show that but for D's action, P would not have yielded to total restraint."
+    source_date: "IMG_4052.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::false_imprisonment
+      - jurisdiction::canada
+      - source::IMG_4052
+
+  # 4. IIMS (IMG_4055.HEIC)
+  - id: elem-iims
+    type: qa
+    context: "Tort Elements · Mental Suffering & Harassment"
+    front: "What are the **3 elements** required to prove **IIMS** (Intentional Infliction of Mental Suffering)?"
+    back: |
+      1. **Flagrant and outrageous** conduct (objective)
+      2. **Calculated to cause harm** (subjective — intended or substantially certain)
+      3. Resulted in **visible and provable injury** (objective)
+    why_extra: "El. 1: single or cumulative act; malicious intent not required. El. 2: mere foreseeability or reckless disregard fails. El. 3: focus on symptoms, not specific diagnoses."
+    source_date: "IMG_4055.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::iims
+      - jurisdiction::canada
+      - source::IMG_4055
+
+  # 5. INTERNET HARASSMENT (IMG_4050.HEIC)
+  - id: elem-internet-harassment
+    type: qa
+    context: "Tort Elements · Mental Suffering & Harassment"
+    front: "What are the **3 elements** required to prove **internet harassment**?"
+    back: |
+      1. D **maliciously or recklessly** engages in communication conduct so outrageous (character, duration, extreme degree) it goes beyond all bounds of decency & tolerance
+      2. With intent to cause **fear, anxiety, or emotional upset**, or **impugn P's dignity** (captures reckless & intentional acts)
+      3. P **suffers such harm** (*Mustapha* level)
+    why_extra: "Harm threshold = *Mustapha* level (more than mere upset, but lower than IIMS's visible/provable injury)."
+    source_date: "IMG_4050.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::internet_harassment
+      - jurisdiction::canada
+      - source::IMG_4050
+
+  # 6. COMMON-LAW HARASSMENT (IMG_4054.HEIC)
+  - id: elem-harassment
+    type: qa
+    context: "Tort Elements · Mental Suffering & Harassment"
+    front: "What are the **4 elements** required to prove **common-law harassment**?"
+    back: |
+      1. **Repeated** communications, threats, insults, stalking, or other harassing behaviour (or through other means)
+      2. D **knew or ought to have known** it was unwelcome (subjective or objective)
+      3. **Impugns dignity**, would cause a reasonable person to **fear for safety** (or loved ones'), or could foreseeably cause **emotional distress**
+      4. **Caused harm** (at least *Mustapha* level)
+    why_extra: "Harm hierarchy: visible/provable harm > severe/extreme > psychological injury."
+    source_date: "IMG_4054.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::harassment
+      - jurisdiction::canada
+      - source::IMG_4054
+
+  # 7. IPV THROUGH COERCIVE CONTROL (IMG_4056.HEIC)
+  - id: elem-ipv-coercive-control
+    type: qa
+    context: "Tort Elements · Mental Suffering & Harassment"
+    front: "What are the **3 elements** required to prove **IPV through coercive control**?"
+    back: |
+      1. Abusive conduct arose in an **intimate partner relationship** (or its aftermath)
+      2. D **intentionally** engaged in that conduct
+      3. Conduct constitutes **coercive control** (objective standard in context)
+    why_extra: "Coercive control = subordinating an intimate partner to the other's control. Separated parties ≠ IPV ended; D need only intend the conduct (not harm); D's knowledge of P's vulnerability matters."
+    source_date: "IMG_4056.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::coercive_control
+      - jurisdiction::canada
+      - source::IMG_4056
+
+  # 8. BC STATUTORY PRIVACY TORT — 3-STEP TEST (IMG_4057 & IMG_4058)
+  - id: elem-bc-privacy-test
+    type: qa
+    context: "Tort Elements · Privacy (BC)"
+    front: "What is the **3-step test** to succeed on **BC's statutory privacy tort**?"
+    back: |
+      1. Was P **entitled to privacy**? (subjective expectation + reasonable in all circumstances)
+      2. Did D violate it **wilfully** and **without a claim of right**?
+      3. Does any **s. 2 defence** apply?
+    why_extra: "Actionable without proof of damage; includes eavesdropping with or without trespass. Balance P's expectation against others' lawful interests, info use, nature/occasion of act, and parties' relationship."
+    source_date: "IMG_4057.HEIC & IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - jurisdiction::bc
+      - source::IMG_4057
+      - source::IMG_4058
+
+  # 9. BC STATUTORY PRIVACY TORT — S. 2 DEFENCES (IMG_4057)
+  - id: elem-bc-privacy-s2-defences
+    type: qa
+    context: "Tort Elements · Privacy (BC)"
+    front: "What are the **s. 2 defences** to **BC's statutory privacy tort**?"
+    back: |
+      1. **(a) Consent**
+      2. **(b)** Incidental to lawful **defence of person or property**
+      3. **(c)** Authorized under **law or court**
+      4. **(d)** **(i) Peace officer** in course of duty, or **(ii) public officer** investigating under law in course of duty
+    why_extra: "Step 2 terms: wilfully = intended or knew/should have known (not accidental); claim of right = honest belief in a state of facts that, if it existed, would be legal justification."
+    source_date: "IMG_4057.HEIC & IMG_4058.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::bc_privacy
+      - jurisdiction::bc
+      - source::IMG_4057
+      - source::IMG_4058
+
+  # 10. PUBLIC DISCLOSURE OF PRIVATE FACTS (IMG_4061.HEIC)
+  - id: elem-public-disclosure
+    type: qa
+    context: "Tort Elements · Privacy"
+    front: "What are the **4 elements** required to prove **public disclosure of private facts**?"
+    back: |
+      1. D **publicized** an aspect of P's **private life** (reasonable person standard)
+      2. P did **not consent** to the publication
+      3. The matter publicized or its publication would be **highly offensive** to a reasonable person in P's position
+      4. Publication was **not of legitimate public concern**
+    why_extra: "No damages or harm need to be proven by P."
+    source_date: "IMG_4061.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::public_disclosure
+      - jurisdiction::canada
+      - source::IMG_4061
+
+  # 11. ONTARIO: INTRUSION UPON SECLUSION (IMG_4062.HEIC)
+  - id: elem-intrusion-upon-seclusion
+    type: qa
+    context: "Tort Elements · Privacy (Ontario)"
+    front: "What are the **3 elements** required to prove **Ontario's intrusion upon seclusion**?"
+    back: |
+      1. D's conduct is **intentional or reckless**
+      2. D invaded P's **private affairs or concerns** without lawful justification (objective)
+      3. A reasonable person would regard the invasion as **highly offensive**, causing distress, humiliation, or anguish (objective)
+    why_extra: "Must be a significant invasion; once the other elements are proven, distress/humiliation/anguish is generally presumed."
+    source_date: "IMG_4062.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::intrusion_upon_seclusion
+      - jurisdiction::ontario
+      - source::IMG_4062
+
+  # 12. CONVERSION (IMG_4059.HEIC)
+  - id: elem-conversion
+    type: qa
+    context: "Tort Elements · Property"
+    front: "What are the **4 elements** required to prove **conversion**?"
+    back: |
+      1. **Positive wrongful act** (without lawful justification; intent not required)
+      2. Involving another's **chattel** (goods)
+      3. Consisting of **handling, disposing of, or destroying** the chattel
+      4. With intention to, or effect of, **denying or negating title** (exercising dominion)
+    why_extra: "Mere use or moving/changing location ≠ conversion unless serious enough to show intent to exercise dominion."
+    source_date: "IMG_4059.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::conversion
+      - jurisdiction::canada
+      - source::IMG_4059
+
+  # 13. TRESPASS TO LAND (IMG_4060.HEIC)
+  - id: elem-trespass-to-land
+    type: qa
+    context: "Tort Elements · Property"
+    front: "What are the **3 elements** required to prove **trespass to land**?"
+    back: |
+      1. **Intentional** conduct (focused on physical consequences)
+      2. **Direct** interference (immediate consequence of force set in motion by D)
+      3. **Physical interference** with land in another's possession (without lawful justification)
+    why_extra: "Physical presence of D or an object left by D; can be minimal (*Hickey*). Unremoved object = continuing trespass; dug hole = consequence of trespass."
+    source_date: "IMG_4060.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::trespass_to_land
+      - jurisdiction::canada
+      - source::IMG_4060
+
+  # 14. FRAUD / CIVIL DECEIT (IMG_4063.HEIC)
+  - id: elem-fraud
+    type: qa
+    context: "Tort Elements · Economic Torts"
+    front: "What are the **5 elements** required to prove **civil fraud**?"
+    back: |
+      1. D made a **false factual representation** (objective; onus on P)
+      2. **Knowing** it was false or **reckless** as to its truth (subjective honest belief)
+      3. **Intending** P would act on it (usually inferred from circumstances)
+      4. P **materially relied** and was induced to alter position (objective in BC)
+      5. P's reliance **caused loss**
+    why_extra: "Recklessness ≠ negligence (needs dishonest indifference or pretending to know when not). Statement need not be the sole cause."
+    source_date: "IMG_4063.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::fraud
+      - jurisdiction::canada
+      - jurisdiction::bc
+      - source::IMG_4063
+
+  # 15. UNLAWFUL MEANS TORT (IMG_4064.HEIC)
+  - id: elem-unlawful-means
+    type: qa
+    context: "Tort Elements · Economic Torts"
+    front: "What are the **3 elements** required to prove the **unlawful means tort**?"
+    back: |
+      1. D committed an **unlawful act** against a **third party** (actionable civil wrong)
+      2. The unlawful act **caused economic harm** to P
+      3. D **intended** to cause economic harm to P when committing the act
+    why_extra: "Unlawful = conduct giving rise to a civil action by 3rd party (or would if it suffered loss). Intent = end in itself or necessary means (excludes inevitable consequences, knowledge it will probably cause harm, or recklessness)."
+    source_date: "IMG_4064.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::unlawful_means
+      - jurisdiction::canada
+      - source::IMG_4064
+
+  # 16. INDUCING BREACH OF CONTRACT — OBJECTIVE ELEMENTS (IMG_4065.HEIC)
+  - id: elem-inducing-breach-objective
+    type: qa
+    context: "Tort Elements · Economic Torts"
+    front: "In **inducing breach of contract**, what are the **4 objective elements** (contract, breach, causation, damage)?"
+    back: |
+      1. **Valid contract** between P and a 3rd party
+      2. 3rd party **breached** its contract with P
+      3. **D's acts caused** that breach
+      4. P suffered **damage** as a result of the breach
+    why_extra: "Pair with D's 3 mental-state elements (aware of contract, knew inducing breach, intended to procure breach) and defence of justification."
+    source_date: "IMG_4065.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::inducing_breach
+      - jurisdiction::canada
+      - source::IMG_4065
+
+  # 17. INDUCING BREACH OF CONTRACT — MENTAL STATE & DEFENCE (IMG_4065.HEIC)
+  - id: elem-inducing-breach-mental-defence
+    type: qa
+    context: "Tort Elements · Economic Torts"
+    front: "In **inducing breach of contract**, what are D's **3 mental-state elements** and **defence**?"
+    back: |
+      1. D was **aware** of the contract
+      2. D **knew** it was inducing breach of contract
+      3. D **intended** to procure the breach (desired end or means to an end)
+      4. **Defence:** D may raise **justification** (e.g., professional advice; protecting own legitimate economic rights in good faith)
+    why_extra: "Protecting own legitimate economic rights may involve rights equal or superior to P's."
+    source_date: "IMG_4065.HEIC · 2026-11-25"
+    tags:
+      - topic::torts::inducing_breach
+      - jurisdiction::canada
+      - source::IMG_4065

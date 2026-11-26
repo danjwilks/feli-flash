@@ -58,6 +58,20 @@ DEFAULT_CSS = """\
   color: #0f172a;
 }
 
+.eb-back ol,
+.eb-back ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.eb-back li {
+  margin-bottom: 6px;
+}
+
+.eb-back li:last-child {
+  margin-bottom: 0;
+}
+
 .eb-why-extra {
   margin-top: 20px;
   padding: 12px 16px;

@@ -30,13 +30,25 @@ jobs:
       - name: Run tests
         run: uv run pytest -v
 
-      - name: Build & verify Anki deck + preview
+      - name: Build & verify both Anki decks + previews
         run: |
+          # Deck 1 (Start Here): Bare-minimum Core Elements & Legal Tests (17 cards)
+          uv run feli-flash build decks/tort-law-elements.yaml \
+            -o dist/canadian-tort-law-elements.apkg \
+            --preview dist/index.html \
+            --no-audit \
+            --alt-link-label "Full Deep Dive (125 cards)" \
+            --alt-link-href "deep-dive.html"
+
+          # Deck 2 (Preserved Full Version): Atomic Nuances, Contrasts & Applications (103 notes / 125 cards)
           uv run feli-flash build decks/tort-law.yaml \
             -o dist/canadian-tort-law.apkg \
-            --preview dist/index.html \
-            --strict
-          cp dist/index.html dist/canadian-tort-law-preview.html
+            --preview dist/deep-dive.html \
+            --strict \
+            --alt-link-label "← Core Elements (17 cards)" \
+            --alt-link-href "index.html"
+
+          cp dist/index.html dist/elements.html
           touch dist/.nojekyll
 
       - name: Setup Pages

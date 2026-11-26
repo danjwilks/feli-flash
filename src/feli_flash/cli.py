@@ -129,7 +129,13 @@ def _cmd_build(args: argparse.Namespace) -> int:
     if args.preview:
         preview_out = Path(args.preview).expanduser().resolve()
         apkg_href = result.output_path.name if preview_out.parent == result.output_path.parent else None
-        preview_path = generate_preview_html(spec, preview_out, apkg_href=apkg_href)
+        preview_path = generate_preview_html(
+            spec,
+            preview_out,
+            apkg_href=apkg_href,
+            alt_link_label=args.alt_link_label,
+            alt_link_href=args.alt_link_href,
+        )
         print(f"  Preview: {preview_path}")
 
     if args.tsv:
@@ -205,6 +211,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_build.add_argument("--no-verify", action="store_true", help="Skip post-build .apkg SQLite verification")
     p_build.add_argument("--no-audit", action="store_true", help="Skip Evidence-Based QA Acceptance Gate audit")
     p_build.add_argument("--strict", action="store_true", help="Fail build on QA audit warnings as well as errors")
+    p_build.add_argument("--alt-link-label", help="Optional button label linking to a companion deck preview")
+    p_build.add_argument("--alt-link-href", help="Optional URL/href for the companion deck preview link")
     p_build.set_defaults(func=_cmd_build)
 
     p_audit = subparsers.add_parser("audit", help="Run Evidence-Based QA Acceptance Gate checks on a deck spec.")
